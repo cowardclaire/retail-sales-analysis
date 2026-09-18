@@ -207,6 +207,23 @@ I used GitHub for version control, committing once I had made big, meaningful ch
 ## Communication Strategy
 Throughout this project, I have aimed to create visuals, insights, and a dashboard that could be used by technical and non-technical users. In retail, from my experience, there are different levels of data understanding, and so when creating the dashboard I had this in mind and made it as intuitive as possible. The insights and recommendations page was written to help explain the visuals and what the findings are so that a non-technical user could understand the information easily. While the EDA, modelling choices, and evaluation metrics provide the deeper detail a technical user would expect to see, the overall aim was to communicate the analysis in a way that was accessible to both types of users.
 
+## AI Support Summary
+AI was used as a support tool, not a replacement for learning — all decisions, interpretations and final implementations were made independently.
+
+AI assisted with debugging and troubleshooting, helping resolve environment issues, interpreter conflicts, Git problems and deployment errors without generating full solutions that bypass understanding.
+
+AI provided guided explanations of modelling concepts, feature engineering choices and evaluation metrics, helping deepen understanding rather than supplying pre‑built models.
+
+AI supported code clarity and structure, offering improvements, refactoring suggestions and best‑practice patterns while ensuring the logic remained student‑led.
+
+AI helped generate EDA visualisation code and interpret patterns, but all insights, conclusions and recommendations were written independently.
+
+AI contributed to Streamlit UI development, suggesting layout improvements and simplifying prediction logic while ensuring the student controlled design decisions.
+
+AI assisted with documentation, helping refine the README, insights and reflective sections, but all content was reviewed, edited and contextualised by the student.
+
+AI was used responsibly, with awareness of its limitations, ensuring no sensitive data was shared and no automated decisions were made without human validation.
+
 ## Conclusion
 
 Overall, this project has looked at retail sales volume, finding out what really drives performance. I explored the different product attributes and found that price was the biggest driver, shown through the strongest correlation between sales volume and promotion. After exploring the dataset through visuals, I created a model that would forecast sales based on attributes such as whether the product was on promotion, what category it fell into, store position, and price. Then I created a simple Streamlit dashboard that allowed users to toggle between these features before forecasting the units they would sell.
