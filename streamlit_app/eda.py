@@ -24,7 +24,7 @@ st.write("### Sales Volume by Category")
 st.image(str(EDA_DIR / "sales_volume_by_category.png"))
 st.caption("Shows that average sales volume is broadly consistent across all product categories.")
 
-st.write("### Sales Volume by Position")
+st.write("### Sales Volume by Store Position")
 st.image(str(EDA_DIR / "sales_volume_by_position.png"))
 st.caption("Reviewing sales volume by product position shows the averages across the different positions are roughly the same.")
 
