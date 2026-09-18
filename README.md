@@ -26,7 +26,18 @@ This project aims to help retailers understand what drives product sales, the im
 
 My initial thoughts, before EDA, were that the different attributes would increase sales, such as price, store product position, whether a product was on promotion or not, and whether there were categories that sold more than others.
 
-I then used the EDA process to try and find out whether these were true. Looking at sales volume by category and position in store showed minimal variance, so I could draw the conclusion that neither of these were drivers of volume. From the correlation heatmap, I was able to see that the biggest driver was promotion — there was a high 0.89 correlation between promotion and sales volume. This was further confirmed when I looked at the sales volume distribution visual, where I could see two peaks indicating sales on promotion versus not on promotion. Sales volume by promotion also shows higher sales volumes when products are promoted. Product position in store showed minimal variance; however, when on promotion, I found that it did change.
+```text
+•  H1: Higher prices reduce sales volume. 
+   Supported — EDA showed a negative relationship, and the model confirmed as price increased, we saw a decline in sales volume.
+•  H2: Promotional activity inreases sales volume. 
+   Supported — Promotion and sales volume had the strongest correlation in the heatmap. It showed a strong positive effect in both EDA and the model, and significantly boosted sales.
+•  H3: Product category influences sales volume. ✖ 
+   Not supported — From EDA we saw minimal variance in sales volume when the product category changed.
+•  H4: Shelf position affects sales volume. 
+   Not supported — We saw minimal variance in sales volume across the different store positions, however when on promotion we saw a bigger variance but does not support my initial hypothesis.
+•  H5: Combining price and promotion provides a reliable prediction of sales volume. 
+   Supported — The model showed using price + promotion achieved strong performance (R² ≈ 0.86).	
+   ```
 
 ## Methodology
 
