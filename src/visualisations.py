@@ -146,11 +146,15 @@ def plot_sales_volume_by_position(df):
 
 def plot_promotion_effectiveness(df):
     fig, ax = plt.subplots(figsize=(8,6))
+
     promo_means = df.groupby('promotion')['sales_volume'].mean()
+    promo_means.index = promo_means.index.map({0: "No", 1: "Yes"})
+
     sns.barplot(x=promo_means.index, y=promo_means.values,
                 palette='coolwarm', ax=ax)
+
     ax.set_title("Promotion Effectiveness (Mean Sales Volume)")
-    ax.set_xlabel("Promotion (0 = No, 1 = Yes)")
+    ax.set_xlabel("Promotion")
     ax.set_ylabel("Average Sales Volume")
 
     save_plot(fig, "promotion_effectiveness.png")
