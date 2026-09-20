@@ -22,16 +22,16 @@ This project was meant to help retailers understand what drives sales volume and
 
 This project aims to help retailers understand what drives product sales, the impact of pricing and promotions, which categories perform best, and how to manage stock levels through better forecasting.
 
-## Hypotheses
+## Hypothesis
 
 My initial thoughts, before EDA, were that the different attributes would increase sales, such as price, store product position, whether a product was on promotion or not, and whether there were categories that sold more than others.
 
 ```text
 •  H1: Higher prices reduce sales volume. 
    Supported — EDA showed a negative relationship, and the model confirmed as price increased, we saw a decline in sales volume.
-•  H2: Promotional activity inreases sales volume. 
+•  H2: Promotional activity increases sales volume. 
    Supported — Promotion and sales volume had the strongest correlation in the heatmap. It showed a strong positive effect in both EDA and the model, and significantly boosted sales.
-•  H3: Product category influences sales volume. ✖ 
+•  H3: Product category influences sales volume. 
    Not supported — From EDA we saw minimal variance in sales volume when the product category changed.
 •  H4: Shelf position affects sales volume. 
    Not supported — We saw minimal variance in sales volume across the different store positions, however when on promotion we saw a bigger variance but does not support my initial hypothesis.
@@ -237,6 +237,6 @@ AI was used responsibly, with awareness of its limitations, ensuring no sensitiv
 
 ## Conclusion
 
-Overall, this project has looked at retail sales volume, finding out what really drives performance. I explored the different product attributes and found that price was the biggest driver, shown through the strongest correlation between sales volume and promotion. After exploring the dataset through visuals, I created a model that would forecast sales based on attributes such as whether the product was on promotion, what category it fell into, store position, and price. Then I created a simple Streamlit dashboard that allowed users to toggle between these features before forecasting the units they would sell.
+Overall, this project has looked at retail sales volume, finding out what really drives performance. I explored the different product attributes and found that price was the biggest driver, as shown by the strongest correlation between price and sales volume. After exploring the dataset through visuals, I created a model that would forecast sales based on attributes such as whether the product was on promotion, what category it fell into, store position, and price. Then I created a simple Streamlit dashboard that allowed users to toggle between these features before forecasting the units they would sell.
 
 Through this project, I worked through the full data analytics cycle from cleaning the raw data, through EDA and insights, to creating a model and a Streamlit dashboard. It shows how data can help with commercial decisions backed by evidence.
