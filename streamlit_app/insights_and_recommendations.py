@@ -35,8 +35,8 @@ st.write("""
 
 The XGBoost model achieved:
 
-- **RMSE:** ~108  
-- **MAE:** ~83  
+- **RMSE:** ~110 
+- **MAE:** ~84 
 - **R²:** ~0.86  
 
 This means the model explains over **86%** of sales behaviour — strong performance for real retail data.
