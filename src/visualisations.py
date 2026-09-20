@@ -84,13 +84,24 @@ def plot_product_category(df):
 # --------------------------------------------------------
 # 4. PROMOTION VS SALES VOLUME
 # --------------------------------------------------------
-
 def plot_promotion_vs_sales(df):
+    # Convert promotion values to Yes/No
+    df_plot = df.copy()
+    df_plot["promotion"] = df_plot["promotion"].map({0: "No", 1: "Yes"})
+
     fig, ax = plt.subplots(figsize=(10,6))
-    sns.boxplot(data=df, x='promotion', y='sales_volume', hue='promotion',
-                palette='coolwarm', legend=False, ax=ax)
+    sns.boxplot(
+        data=df_plot,
+        x='promotion',
+        y='sales_volume',
+        hue='promotion',
+        palette='coolwarm',
+        legend=False,
+        ax=ax
+    )
+
     plt.title("Sales Volume by Promotion")
-    plt.xlabel("Promotion (0 = No, 1 = Yes)")
+    plt.xlabel("Promotion")
     plt.ylabel("Sales Volume")
 
     save_plot(fig, "promotion_vs_sales_volume.png")
