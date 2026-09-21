@@ -329,6 +329,9 @@ AI explained a couple of my visuals, helping me understand what I was reading, p
 
 AI was used responsibly, with awareness of its limitations, ensuring no sensitive data was shared and no automated decisions were made without human validation.
 
+## Personal Development Roadmap
+Following this project I would like to continue developing my coding skills, and improve on my understanding and usage of Streamlit and Heroku. As mentioned in my future improvements, adding a time aspect to this model would help improve the sales forecast tool as we know that products will sell more or less dependant on time of year. This would be another area I would like to develop which is time series forecasting.
+
 ## Conclusion
 
 Overall, this project has looked at retail sales volume, finding out what really drives performance. I explored the different product attributes and found that price was the biggest driver, as shown by the strongest correlation between price and sales volume. After exploring the dataset through visuals, I created a model that would forecast sales based on attributes such as whether the product was on promotion, what category it fell into, store position, and price. Then I created a simple Streamlit dashboard that allowed users to toggle between these features before forecasting the units they would sell.
