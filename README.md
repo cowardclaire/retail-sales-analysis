@@ -44,12 +44,18 @@ My initial thoughts, before EDA, were that the different attributes would increa
 I followed the data analytics workflow, detailed below:
 
 #### Data Collection
+The dataset I used in this project is linked below:
+
 Dataset: Zara Sales for EDA
 Source: Kaggle
 Uploader: Maryam Idrissi
 URL: https://www.kaggle.com/datasets/marixe/zara-sales-for-eda/data
 Licence: Apache 2.0  
 Date accessed: July 2026
+
+Also want to acknowledge the Data Analytics Template supplied my Code Institute:
+
+https://github.com/Code-Institute-Org/data-analytics-template
 
 #### Project Setup
 I used the template given for this project before consulting AI for help in setting up my project structure. I knew that the layout would be important to the project and wanted to ensure from the beginning that I had a clear structure and folders.
@@ -143,6 +149,10 @@ streamlit run streamlit_app/app.py
 
 This will open a browser and take you to the web page for the Retail Dashboard.
 
+Also available through the link below:
+
+https://retail-sales-analysis-90661e4cb32a.herokuapp.com/
+
 ## Dashboard Pages
 
 ```text
@@ -216,6 +226,54 @@ LightGBM was described as great for huge datasets and uses leaf growth methods. 
 
 ## Future Improvements
 Looking ahead, this project could continue to grow by adding seasonality and holiday effects such as Christmas, Black Friday, and Easter. While we can currently forecast sales volume and see how much promotion drives this, the next logical step would be to add margins. To further delve into profitability, it would be useful to know each product’s margin so we could create a model that suggests what depth of promotion would drive more sales volume while protecting profitability.
+
+# Implementation, Maintenance & Evaluation Plan
+To make sure this project can be maintained and updated over time, I have outlined a plan covering how new data will be added in, how the model will be retrained, and how the dashboard will be tested before redeployment.
+
+## Data Updates & Pipeline
+New retail data can be added to the versioned folder structure (data/raw/).
+When new data becomes available, the full cleaning and feature‑engineering processes will be rerun to generate updated datasets in data/cleaned/. This keeps the project reusable and makes sure the model is always trained on data cleaned in a consistent way.
+
+## Model Retraining
+The model will be retrained whenever there is:
+
+new data is added, or
+
+performance metrics begin to decline.
+
+Retraining will follow the same process used in the initial set up, ensuring consistency. Updated models will be stored in data/model/.
+
+## Performance Monitoring
+Model performance will be monitored using RMSE, MAE and R².
+These metrics will be compared against the current deployed model to see if the new version pushes out similar results and is maintaining its high scores. Only models that outperform the existing one will be promoted to production.
+
+## Model Comparison
+Before replacing the existing model, I would check:
+
+that both models are tested on the same data
+
+compare the RMSE, MAE and R² results side‑by‑side
+
+check for overfitting or unexpected behaviour
+
+## Dependency Management
+Project dependencies, such as python versions or streamlit updates, will be reviewed periodically.
+The requirements.txt file will also be updated accordingly. This helps prevent breaking changes in the deployed dashboard.
+
+## Testing Before Redeployment
+Before redeploying the updated dashboard, I would run the below checks:
+
+page navigation - check that you can click through all the pages in the Streamlit app
+
+chart rendering - make sure all charts are pulling through correctly
+
+model loading - confirm that the model loads properly
+
+valid and invalid prediction inputs - try inputting different values eg £30 retail price and yes on promotion, to see that the model returns a sensible prediction. Also try inputting something wrong eg. text in the retail price section and make sure the app handles it
+
+deployment behaviour on the hosting platform - make sure the app can load from Heroku
+
+Only once all tests pass will the updated version be redeployed.
 
 ## Version Control
 I used GitHub for version control, committing once I had made big, meaningful changes. I received feedback from my course tutor that I needed to be committing more often near the beginning. I made these changes and began committing more often, which is why you can see more commits from the middle of the capstone project.
