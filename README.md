@@ -278,6 +278,35 @@ Only once all tests pass will the updated version be redeployed.
 ## Version Control
 I used GitHub for version control, committing once I had made big, meaningful changes. I received feedback from my course tutor that I needed to be committing more often near the beginning. I made these changes and began committing more often, which is why you can see more commits from the middle of the capstone project.
 
+## Testing
+
+### Jupyter Notebook Testing
+Throughout adding to the markdown and coding cells, I ran and tested the cells, checking that:
+
+- the data loaded the different .py files such as cleaning and visualisations
+- that each visual pulled through correctly
+
+### Streamlit Testing
+
+I tested the streamlit app throught the stages of deployment.
+
+Testing included:
+
+- that each page loaded correctly
+- that each visual loaded correctly
+- tested the model worked by toggling with the inputs of retail price and promotion filter
+- testing that when toggling the inputs that the charts updated
+
+## Deployment Testing
+
+After linking Heroku and GitHub, thus deploying the app, I tested to confirm that:
+
+- the webpage loaded fully
+- that each page loaded, and displayed fully when clicking through
+- that each visual loaded fully and correctly with the commentary
+- the interactive toggles and filters work
+- that the model predictor tool returned a result
+
 ## Communication Strategy
 Throughout this project, I have aimed to create visuals, insights, and a dashboard that could be used by technical and non-technical users. In retail, from my experience, there are different levels of data understanding, and so when creating the dashboard I had this in mind and made it as intuitive as possible. The insights and recommendations page was written to help explain the visuals and what the findings are so that a non-technical user could understand the information easily. While the EDA, modelling choices, and evaluation metrics provide the deeper detail a technical user would expect to see, the overall aim was to communicate the analysis in a way that was accessible to both types of users.
 
@@ -295,6 +324,8 @@ AI helped generate EDA visualisation code and interpret patterns, but all insigh
 AI contributed to Streamlit UI development, suggesting layout improvements and simplifying prediction logic while ensuring the student controlled design decisions.
 
 AI assisted with documentation, helping refine the README, insights and reflective sections, but all content was reviewed, edited and contextualised by the student.
+
+AI explained a couple of my visuals, helping me understand what I was reading, particularily when it came to boxplots. I asked it to explain what I was seeing and what it meant in relation to my EDA. For example with my price boxplot I asked for insight into what it was telling me, and I gained understanding that it showed majority sat in £25 -£55.
 
 AI was used responsibly, with awareness of its limitations, ensuring no sensitive data was shared and no automated decisions were made without human validation.
 
