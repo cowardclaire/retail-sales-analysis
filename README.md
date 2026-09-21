@@ -44,7 +44,12 @@ My initial thoughts, before EDA, were that the different attributes would increa
 I followed the data analytics workflow, detailed below:
 
 #### Data Collection
-I found my dataset on Kaggle.
+Dataset: Zara Sales for EDA
+Source: Kaggle
+Uploader: Maryam Idrissi
+URL: https://www.kaggle.com/datasets/marixe/zara-sales-for-eda/data
+Licence: Apache 2.0  
+Date accessed: July 2026
 
 #### Project Setup
 I used the template given for this project before consulting AI for help in setting up my project structure. I knew that the layout would be important to the project and wanted to ensure from the beginning that I had a clear structure and folders.
@@ -100,11 +105,11 @@ capstone-project/
 ├── src/                      # Model training scripts
 ├── jupyter_notebooks/        # Full EDA + modelling notebook
 ├── streamlit_app/            # Dashboard application
-│   ├── Main_Page.py          # Home page
-│   └── Pages/
-│       ├── EDA.py
-│       ├── Model_Predictions.py
-│       └── Insights_and_Recommendations.py
+│   ├── main_page.py          # Home page
+│       ├── app.py
+│       ├── eda.py
+│       ├── insights_and_recommendations.py
+│       └── model_predictions.py
 └── README.md                 # Project documentation
 ```
 
